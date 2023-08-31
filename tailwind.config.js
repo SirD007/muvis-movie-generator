@@ -2,7 +2,10 @@
 module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+      'card': '210px',
+    }},
   },
   plugins: [],
 }

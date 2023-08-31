@@ -15,45 +15,26 @@
     <title>Muvis - Find the perfect movie for you</title>
 </head>
 
-<body>
-    <div class="w-screen h-screen p-12 gap-6 bg-neutral-900 flex flex-col items-center justify-center">
+<body class="bg-neutral-900">
+    <div class="w-screen h-screen p-8 gap-6 bg-neutral-900 flex flex-col items-center justify-center">
         <img class="h-8 left-12" src="src/logo.svg" />
-        <div class="justify-center items-center grid grid-cols-3 gap-6 h-full">
-            <div class="h-full flex flex-col gap-6">
-                <div
-                    class="h-full p-10 bg-gradient-to-r from-rose-400 to-rose-500 rounded-2xl shadow-xl flex-col gap-2 flex justify-center">
-
-                    <span class="text-white text-3xl font-black leading-9 text-center">Find the perfect movie for
-                        you</span>
-                    <div class="flex flex-col">
-                        <label for="genreSelect" class="text-center text-lg mb-2 text-slate-200">Pick a genre</label>
-                        <select id="genreSelect" name="MovieGenreInput"
-                            class="p-4 text-lg text-gray-300 text-center bg-neutral-700 hover:bg-neutral-600 rounded-lg focus:outline-none focus:border-rose-500 focus:border-[1px]">
-                            <option value="random">Random</option>
-                        </select>
-                    </div>
-                </div>
-                <div
-                    class="h-full p-8 bg-neutral-800 rounded-2xl shadow-xl flex-col justify-center items-center flex">
-                    <span class="text-xs text-center text-zinc-300">
-                        This project was developed by <a href="https://github.com/sird007">David Morais</a>  as part of the <a href="https://rocketseat.com.br">Rocketseat</a> challenge. With the aim of
-                        meeting the challenge's requirements, David invested time and effort to create a solution that
-                        not only fulfills the criteria but also demonstrates his skills and dedication in the field of
-                        software development. Through this project, David showcases his commitment to learning and
-                        growth, while also contributing to his portfolio of accomplishments.</span>
-                        <span class="text-zinc-500 text-sm mt-5">Please, feel free to contact me</span>
-                        <div class="flex gap-3">
-                            <a target="_blank" href="https://github.com/sird007"><button class="rounded-md bg-neutral-600 p-2"><img class="w-4" src="src/icons/githubIcon.svg" alt=""></button></a>
-
-                            <a target="_blank" href="https://www.linkedin.com/in/david-morais-9627881a7"><button class="rounded-md bg-neutral-600 p-2"><img class="w-4" src="src/icons/linkedinIcon.svg" alt=""></button></a>
-
-                            <a target="_blank" href="https://instagram.com/_odaviddev_"><button class="rounded-md bg-neutral-600 p-2"><img class="w-4" src="src/icons/instagramIcon.svg" alt=""></button></a>
-                        </div>
+        <div class="grid grid-cols-3 grid-rows-2 max-md:flex max-md:flex-col gap-6 h-full">
+            <div
+                class="col-start-1 max-sm:row-start-1 h-full w-full p-10 bg-gradient-to-r from-rose-400 to-rose-500 rounded-2xl shadow-xl flex-col gap-2 flex justify-center">
+                <span class="text-white text-3xl font-black leading-9 text-center">Find the perfect movie for
+                    you</span>
+                <div class="flex flex-col">
+                    <label for="genreSelect" class="text-center text-lg mb-2 text-slate-200">Pick a genre</label>
+                    <select id="genreSelect" name="MovieGenreInput"
+                        class="p-4 text-lg text-gray-300 text-center bg-neutral-700 hover:bg-neutral-600 rounded-lg focus:outline-none focus:border-rose-500 focus:border-[1px]">
+                        <option value="random">Random</option>
+                    </select>
                 </div>
             </div>
+
             <div
-                class="h-full col-start-2 col-span-2 p-10 bg-neutral-800 rounded-2xl shadow-xl flex-col justify-start items-center gap-9 flex">
-                <div class="w-full justify-end items-center gap-9 inline-flex">
+                class="row-start-1 col-span-2 row-span-2 col-start-2 p-10 bg-neutral-800 rounded-2xl shadow-xl flex-col justify-start items-center gap-9 flex">
+                <div class="w-full justify-end items-center gap-9 inline-flex relative max-md:justify-center">
                     <button id="newMovieListBtn" onclick="start()"
                         class="px-4 py-2 bg-gradient-to-r from-rose-400 to-rose-500 rounded items-center gap-2 flex w-56 justify-center">
                         <span class="text-white text-base font-normal leading-tight">New recomendation</span>
@@ -64,10 +45,35 @@
                         </div>
                     </button>
                 </div>
-                <div id="movies" class="h-full w-full justify-center gap-9 flex items-center">
+                <div id="movies"
+                    class="h-full w-full justify-center gap-9 flex items-center max-md:flex-col max-md:justify-start">
 
                 </div>
-                <span id="trailerErrorMsg" class="text-sm text-red-500 text-center absolute bottom-24"></span>
+                <span id="trailerErrorMsg" class="text-sm text-red-500 text-center absolute bottom-16">teste</span>
+            </div>
+
+            <div
+                class="row-start-2 w-full h-full p-8 bg-neutral-800 rounded-2xl shadow-xl flex-col justify-center items-center flex">
+                <span class="text-xs text-center text-zinc-300">
+                    This project was developed by <a class="text-rose-500" href="https://github.com/sird007">David Morais</a> as part of the
+                    <a class="text-rose-500" href="https://rocketseat.com.br">Rocketseat</a> challenge. With the aim of
+                    meeting the challenge's requirements, David invested time and effort to create a solution that
+                    not only fulfills the criteria but also demonstrates his skills and dedication in the field of
+                    software development</span>
+                <span class="text-zinc-500 text-sm mt-5 text-center">Please, feel free to contact me</span>
+                <div class="flex gap-3">
+                    <a target="_blank" href="https://github.com/sird007"><button
+                            class="rounded-md bg-neutral-600 p-2"><img class="w-4" src="src/icons/githubIcon.svg"
+                                alt=""></button></a>
+
+                    <a target="_blank" href="https://www.linkedin.com/in/david-morais-9627881a7"><button
+                            class="rounded-md bg-neutral-600 p-2"><img class="w-4" src="src/icons/linkedinIcon.svg"
+                                alt=""></button></a>
+
+                    <a target="_blank" href="https://instagram.com/_odaviddev_"><button
+                            class="rounded-md bg-neutral-600 p-2"><img class="w-4" src="src/icons/instagramIcon.svg"
+                                alt=""></button></a>
+                </div>
             </div>
         </div>
     </div>

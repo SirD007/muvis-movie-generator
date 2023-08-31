@@ -128,7 +128,7 @@ function createMovieLayout({
         </div>
     </div>
     <div class="flex-col justify-center items-start gap-2 flex">
-            <div class="w-[210px] bg-opacity-20 rounded-lg relative">
+            <div class="max-w-card bg-opacity-20 rounded-lg relative">
                     <img class="rounded-lg"
                     src="https://tmdb.org/t/p/w500${poster}" alt="Imagem de ${title}" />
             </div>
