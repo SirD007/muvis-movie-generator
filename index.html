@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="/dist/output.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,137 +12,69 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recomendador de Filmes</title>
+    <title>Muvis - Find the perfect movie for you</title>
 </head>
 
 <body>
-    <div id="container" class="w-screen bg-gradient-to-r from-purple-500 to-pink-500 justify-center items-center flex">
-        <div
-            class="px-24 py-16 bg-neutral-800 rounded-2xl shadow border-4 border-purple-500 flex-col justify-center items-center gap-9 flex">
-            <div class="w-[654px] justify-between items-center gap-9 inline-flex">
-                <div class="w-[85.50px] h-11 relative">
-                    <img class="h-11 left-0 top-0 absolute" src="src/logo.svg" />
-                </div>
-                <button class="px-4 py-2 bg-gradient-to-r from-roxo to-rosa rounded items-center gap-2 flex">
-                    <span class="text-white text-base font-normal leading-tight">Nova recomendação</span>
-                    <div class="w-8 h-8 relative">
-                        <div class="w-8 h-8 left-0 top-0 absolute opacity-20 bg-white rounded-full"></div>
-                        <div class="w-[18px] h-[18px] left-[7px] top-[7px] absolute"><img src="src/icons/flash.svg"
-                                alt=""></div>
+    <div class="w-screen h-screen p-12 gap-6 bg-neutral-900 flex flex-col items-center justify-center">
+        <img class="h-8 left-12" src="src/logo.svg" />
+        <div class="justify-center items-center grid grid-cols-3 gap-6 h-full">
+            <div class="h-full flex flex-col gap-6">
+                <div
+                    class="h-full p-10 bg-gradient-to-r from-rose-400 to-rose-500 rounded-2xl shadow-xl flex-col gap-2 flex justify-center">
+
+                    <span class="text-white text-3xl font-black leading-9 text-center">Find the perfect movie for
+                        you</span>
+                    <div class="flex flex-col">
+                        <label for="genreSelect" class="text-center text-lg mb-2 text-slate-200">Pick a genre</label>
+                        <select id="genreSelect" name="MovieGenreInput"
+                            class="p-4 text-lg text-gray-300 text-center bg-neutral-700 hover:bg-neutral-600 rounded-lg focus:outline-none focus:border-rose-500 focus:border-[1px]">
+                            <option value="random">Random</option>
+                        </select>
                     </div>
-                </button>
+                </div>
+                <div
+                    class="h-full p-8 bg-neutral-800 rounded-2xl shadow-xl flex-col justify-center items-center flex">
+                    <span class="text-xs text-center text-zinc-300">
+                        This project was developed by <a href="https://github.com/sird007">David Morais</a>  as part of the <a href="https://rocketseat.com.br">Rocketseat</a> challenge. With the aim of
+                        meeting the challenge's requirements, David invested time and effort to create a solution that
+                        not only fulfills the criteria but also demonstrates his skills and dedication in the field of
+                        software development. Through this project, David showcases his commitment to learning and
+                        growth, while also contributing to his portfolio of accomplishments.</span>
+                        <span class="text-zinc-500 text-sm mt-5">Please, feel free to contact me</span>
+                        <div class="flex gap-3">
+                            <a target="_blank" href="https://github.com/sird007"><button class="rounded-md bg-neutral-600 p-2"><img class="w-4" src="src/icons/githubIcon.svg" alt=""></button></a>
+
+                            <a target="_blank" href="https://www.linkedin.com/in/david-morais-9627881a7"><button class="rounded-md bg-neutral-600 p-2"><img class="w-4" src="src/icons/linkedinIcon.svg" alt=""></button></a>
+
+                            <a target="_blank" href="https://instagram.com/_odaviddev_"><button class="rounded-md bg-neutral-600 p-2"><img class="w-4" src="src/icons/instagramIcon.svg" alt=""></button></a>
+                        </div>
+                </div>
             </div>
-            <div class="justify-center gap-9 flex">
-
-                <div class="w-max-[194px] h-max-[420px] flex-col justify-center items-start gap-3 flex">
-                    <div class="self-stretch justify-between items-center gap-0.5 inline-flex h-1">
-                        <div class="text-white text-lg font-medium leading-tight">Barbie</div>
-                        <div class="items-center flex">
-                            <img class="" src="src/icons/star.svg" alt="">
-                            <div class="text-amarelo text-base font-semibold">4.9</div>
+            <div
+                class="h-full col-start-2 col-span-2 p-10 bg-neutral-800 rounded-2xl shadow-xl flex-col justify-start items-center gap-9 flex">
+                <div class="w-full justify-end items-center gap-9 inline-flex">
+                    <button id="newMovieListBtn" onclick="start()"
+                        class="px-4 py-2 bg-gradient-to-r from-rose-400 to-rose-500 rounded items-center gap-2 flex w-56 justify-center">
+                        <span class="text-white text-base font-normal leading-tight">New recomendation</span>
+                        <div class="w-8 h-8 relative">
+                            <div class="w-8 h-8 left-0 top-0 absolute opacity-20 bg-white rounded-full"></div>
+                            <div class="w-[18px] h-[18px] left-[7px] top-[7px] absolute"><img src="src/icons/flash.svg"
+                                    alt=""></div>
                         </div>
-                    </div>
-                    <div class="flex-col justify-center items-start gap-2 flex">
-                        <div class="h-72 relative">
-                            <div class="w-[194px] h-72 left-0 top-0 absolute bg-black bg-opacity-20 rounded-lg">
-                                <img class="w-[194px] h-[288.51px] left-0 top-0 absolute rounded-lg"
-                                    src="src/poster1.png" />
-                            </div>
-                        </div>
-                        <div class="w-[194px] justify-between items-center gap-2 inline-flex">
-                            <div class="justify-start items-center gap-1 flex">
-                                <div class="w-5 h-5 relative"><img src="/src/icons/clock.svg" alt=""></div>
-                                <div class="text-zinc-400 text-xs font-normal leading-tight">1:54:00</div>
-                            </div>
-                            <div class="justify-start items-center gap-1 flex">
-                                <div class="w-5 h-5 relative"><img src="src/icons/calendar.svg" alt=""></div>
-                                <div class="text-zinc-400 text-xs font-normal leading-tight">2023</div>
-                            </div>
-                        </div>
-                        <button
-                            class="w-[194px] px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded justify-center items-center gap-2 inline-flex">
-                            <div class="w-7 h-7 relative">
-                                <div class="w-7 h-7 left-0 top-0 absolute bg-neutral-800 rounded-full"><img src="src/icons/playBtn.svg" alt=""></div>
-                            </div>
-                            <div class="text-white text-base font-normal leading-tight">Assistir trailer</div>
-                        </button>
-                    </div>
+                    </button>
                 </div>
+                <div id="movies" class="h-full w-full justify-center gap-9 flex items-center">
 
-                <div class="w-max-[194px] h-max-[420px] flex-col justify-center items-start gap-3 flex">
-                    <div class="self-stretch justify-between items-center gap-0.5 inline-flex h-1">
-                        <div class="text-white text-lg font-medium leading-tight">Oppenheimer</div>
-                        <div class="items-center flex">
-                            <img class="" src="src/icons/star.svg" alt="">
-                            <div class="text-amarelo text-base font-semibold">4.2</div>
-                        </div>
-                    </div>
-                    <div class="flex-col justify-center items-start gap-2 flex">
-                        <div class="h-72 relative">
-                            <div class="w-[194px] h-72 left-0 top-0 absolute bg-black bg-opacity-20 rounded-lg">
-                                <img class="w-[194px] h-[288.51px] left-0 top-0 absolute rounded-lg"
-                                    src="src/poster2.png" />
-                            </div>
-                        </div>
-                        <div class="w-[194px] justify-between items-center gap-2 inline-flex">
-                            <div class="justify-start items-center gap-1 flex">
-                                <div class="w-5 h-5 relative"><img src="/src/icons/clock.svg" alt=""></div>
-                                <div class="text-zinc-400 text-xs font-normal leading-tight">1:54:00</div>
-                            </div>
-                            <div class="justify-start items-center gap-1 flex">
-                                <div class="w-5 h-5 relative"><img src="src/icons/calendar.svg" alt=""></div>
-                                <div class="text-zinc-400 text-xs font-normal leading-tight">2023</div>
-                            </div>
-                        </div>
-                        <button
-                            class="w-[194px] px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded justify-center items-center gap-2 inline-flex">
-                            <div class="w-7 h-7 relative">
-                                <div class="w-7 h-7 left-0 top-0 absolute bg-neutral-800 rounded-full"><img src="src/icons/playBtn.svg" alt=""></div>
-                            </div>
-                            <div class="text-white text-base font-normal leading-tight">Assistir trailer</div>
-                        </button>
-                    </div>
                 </div>
-
-                <div class="w-max-[194px] h-max-[420px] flex-col justify-center items-start gap-3 flex">
-                    <div class="self-stretch justify-between items-center gap-0.5 inline-flex h-1">
-                        <div class="text-white text-lg font-medium leading-tight">Indiana Jones</div>
-                        <div class="items-center flex">
-                            <img class="" src="src/icons/star.svg" alt="">
-                            <div class="text-amarelo text-base font-semibold">4.6</div>
-                        </div>
-                    </div>
-                    <div class="flex-col justify-center items-start gap-2 flex">
-                        <div class="h-72 relative">
-                            <div class="w-[194px] h-72 left-0 top-0 absolute bg-black bg-opacity-20 rounded-lg">
-                                <img class="w-[194px] h-[288.51px] left-0 top-0 absolute rounded-lg"
-                                    src="src/poster3.png" />
-                            </div>
-                        </div>
-                        <div class="w-[194px] justify-between items-center gap-2 inline-flex">
-                            <div class="justify-start items-center gap-1 flex">
-                                <div class="w-5 h-5 relative"><img src="/src/icons/clock.svg" alt=""></div>
-                                <div class="text-zinc-400 text-xs font-normal leading-tight">1:54:00</div>
-                            </div>
-                            <div class="justify-start items-center gap-1 flex">
-                                <div class="w-5 h-5 relative"><img src="src/icons/calendar.svg" alt=""></div>
-                                <div class="text-zinc-400 text-xs font-normal leading-tight">2023</div>
-                            </div>
-                        </div>
-                        <button
-                            class="w-[194px] px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded justify-center items-center gap-2 inline-flex">
-                            <div class="w-7 h-7 relative">
-                                <div class="w-7 h-7 left-0 top-0 absolute bg-neutral-800 rounded-full"><img src="src/icons/playBtn.svg" alt=""></div>
-                            </div>
-                            <div class="text-white text-base font-normal leading-tight">Assistir trailer</div>
-                        </button>
-                    </div>
-                </div>
-
+                <span id="trailerErrorMsg" class="text-sm text-red-500 text-center absolute bottom-24"></span>
             </div>
         </div>
     </div>
+
     </div>
 </body>
+
+<script src="src/index.js"></script>
 
 </html>
